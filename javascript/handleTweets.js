@@ -2,7 +2,7 @@
  * Created by barak on 05/07/2017.
  * solution for the rapidApi
  * main module for communicate with twitter api.
- * @module communicate_with_Twitter
+ * @module handleTweets
  */
 
 var express = require('express');
@@ -44,19 +44,16 @@ var renderPosts = function (data, res) {
 };
 
 
-
-
 /**
  * Handling get requests to get recently posts in tek aviv with some keyword.
  */
 app.get('/keyWord', function (req, res, next) {
     var query = {
-        //We can set count as we want or predefine it.
+        //We can set count as much as we need
         count: 10,
         //http://www.latlong.net/place/tel-aviv-yafo-israel-7174.html
         geocode: "32.109333,34.855499,10km",
         result_type: "recent"
-
     };
     var keyword = req.query.keyword;
     query.q = keyword;
@@ -108,6 +105,7 @@ app.post('/tweet', function (req, res, next) {
             res.status(200).send("Posted");
     });
 });
+
 
 /**
  * exposing the module to the main module.
