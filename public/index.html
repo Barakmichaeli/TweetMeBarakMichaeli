@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script src="clientJavascript/client.js"></script>
+    <meta charset="UTF-8">
+    <title>dashBoard</title>
+</head>
+<body>
+<h1><u>TweetMe Dashboard</u></h1>
+<div class="box3">
+    <form action="/keyWord" method="get">
+        <br>
+        Search Tweets in tel aviv by keyword <br><br>
+        <input type="text" name="keyword" id="userList" placeholder="user name"> <br>
+        <br>
+        <input type="submit" value="Search">
+        <br>
+    </form>
+</div>
+
+<div class="box3">
+    <h2>
+        Tweet
+    </h2>
+    <textarea id="textArea" rows="8" cols="20"></textarea>
+    <br>
+    <br>
+    <input type="button" name="get" value="tweet" onclick="barak()">
+    <br>
+</div>
+
+<div class="box3">
+    <form action="/hashtag" method="get">
+        <br>
+        Search Tweets By hashtag <br><br>
+        <input type="text" name="hashText" id="HashtagList" placeholder="#Hashtag"> <br>
+        <br>
+        <input type="submit" value="Search">
+        <br>
+    </form>
+</div>
+<br><br><br>
+<h1 id="postResult"></h1>
+
+<b><a style="display: block" href="https://twitter.com/barak6546"> Go check it in my Test account in Twitter</a></b>
+</body>
+</html>
+
