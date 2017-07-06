@@ -1,7 +1,7 @@
 {
-  "name": "BarakMichaeli",
+  "name": "TweetMe",
   "version": "0.2.6",
-  "description": "TweetMe project ",
+  "description": "Barak michaeli solution for rapidApi challenge",
   "engines": {
     "node": "6.10.2"
   },
@@ -12,12 +12,12 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "ejs": "2.5.6",
-    "express": "4.15.2"
+    "express": "4.15.2",
+    "twit": "^2.2.9"
   },
   "repository": {
     "type": "git",
-    "url": "https://git.heroku.com/barak-michaeli-solution.git"
-
+    "url": "https://github.com/Barakmichaeli/radpidApiChallenge"
   },
   "keywords": [
     "node",

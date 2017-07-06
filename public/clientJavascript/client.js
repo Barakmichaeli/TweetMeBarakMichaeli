@@ -14,17 +14,17 @@ function barak() {
         return;
 
     http.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log("Server responded well - Posted!")
+        if (this.readyState === 4 && this.status === 200) {
+            console.log("Server responded well - Posted!");
             document.getElementById("postResult").innerHTML = "Posted!";
         }
-        if (this.readyState == 4 && this.status == 500) {
-            console.log("Server returned 500")
+        if (this.readyState === 4 && this.status === 500) {
+            console.log("Server returned 500");
             document.getElementById("postResult").innerHTML = "Something went wrong..";
         }
     };
     var obj = {status: data};
-    var data = JSON.stringify(obj);
+    data = JSON.stringify(obj);
     http.open("POST", "/tweet", true);
     http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     http.send(data);

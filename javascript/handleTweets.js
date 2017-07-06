@@ -49,9 +49,11 @@ var renderPosts = function (data, res) {
  */
 app.get('/keyWord', function (req, res, next) {
     var query = {
-        //We can set count as much as we need
+        //We can set count as much as we want or extra queries as in the Api.
         count: 10,
-        //http://www.latlong.net/place/tel-aviv-yafo-israel-7174.html
+        /**
+         * @link http://www.latlong.net/place/tel-aviv-yafo-israel-7174.html
+         */
         geocode: "32.109333,34.855499,10km",
         result_type: "recent"
     };
@@ -74,7 +76,7 @@ app.get('/keyWord', function (req, res, next) {
  */
 app.get('/hashtag', function (req, res, next) {
     var query = {
-        //We can set count as much as we want ass extra queries as in the Api.
+        //We can set count as much as we want or extra queries as in the Api.
         count: 10,
         result_type: "mixed"
     };
